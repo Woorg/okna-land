@@ -1,0 +1,62 @@
+.reasons
+	position relative
+	background url('../images/general/reason.jpg') 50% 0 no-repeat
+	background-size cover
+	&__foliage
+		position absolute
+		top -236px
+		left -4px
+	&__in
+		@extends .in
+		padding-top $sec-pad-vert
+		padding-bottom $sec-pad-vert
+		text-align center
+	&__title
+		margin-bottom $t-m-bot
+		color #5D3A31
+
+	&__list
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items flex-start
+	&__item
+		position relative
+		width 300px
+		margin-bottom 40px
+
+		&:nth-child(2)
+			margin-left 60px
+			margin-right 60px
+			width 330px
+
+		&:nth-child(4),
+		&:nth-child(5)
+			margin-left 30px
+			margin-right 30px
+
+		&:after
+			position absolute
+			z-index 0
+			top 0
+			left 14px
+			content attr(data-num)
+			font-size 300px
+			font-family $cE
+			opacity .05
+			color #49363b
+			line-height 1
+
+	&__icon,
+	&__text
+		position relative
+		z-index 1
+
+	&__icon
+		left -30px
+		margin auto
+		// margin-bottom 24px
+		max-width 170px
+
+	&__text
+		font-size 22px

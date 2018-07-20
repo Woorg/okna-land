@@ -1,0 +1,183 @@
+.what
+	display block
+	overflow hidden
+	&__foliage
+		position absolute
+		bottom 0
+		left -200px
+	&__in
+		@extends .in
+		padding-top $sec-pad-vert
+		// padding-bottom $sec-pad-vert
+		padding-bottom 182px
+	&__title
+		margin-bottom $t-m-bot
+		color #5d3a31
+	// &__tabs
+
+	&__tabs-nav
+		margin-bottom 90px
+		text-align center
+		display flex
+		flex-flow row wrap
+		justify-content center
+		align-items flex-start
+		+r($tM)
+			margin-bottom (44px/2)
+
+	&__tabs-link
+		border 1px solid transparent
+		padding-top 14px
+		padding-bottom 14px
+		min-width 290px
+		min-height 45px
+		color #49363b
+		font-size 20px
+		line-height 1
+		text-decoration none
+		text-align center
+		box-shadow 0 5px 8px rgba(242, 173, 25, 0.27)
+		border-radius 5px
+		background-image linear-gradient(to top, #ffba01 0%, #ffd615 100%)
+		&:first-child
+			&.what__tabs-link_active
+				margin-right -6px
+				border-radius 5px 0 0 5px
+
+		&:last-child
+			&.what__tabs-link_active
+				margin-left -6px
+				border-radius 0 5px 5px 0
+	&__tabs-link_active
+		position relative
+		z-index 1
+		border 1px solid #fdc516
+		padding-top 14px
+		background #FFF
+		line-height 1
+		box-shadow 0 5px 8px transparent
+		// border-radius 5px 0 0 5px
+		&:after,
+		&:before
+			position absolute
+			left 50%
+			bottom -8px
+			content ""
+		&:after
+			z-index 0
+			left 50%
+			bottom -8px
+			width 0
+			height 0
+			border-style solid
+			border-width 8px 8px 0 8px
+			border-color #fdc516 transparent transparent transparent
+			transform translate(-50%, 0)
+		&:before
+			z-index 1
+			left 50%
+			bottom -6px
+			width 0
+			height 0
+			border-style solid
+			border-width 6px 7px 0 7px
+			border-color #fff transparent transparent transparent
+			transform translate(-50%, 0)
+
+
+
+	// &__tabs-content
+
+
+	&__tab
+		display none
+
+	&__tab_active
+		display block
+
+
+	&__window
+		position relative
+		right -57px
+		margin auto
+		// max-width 1080px
+		max-width 566px
+
+	&__img
+		margin auto
+		img
+			display block
+			max-width 100%
+			height auto
+
+	&__list
+		position absolute
+		top 0
+		left 0
+		right 0
+
+	&__item
+		position absolute
+		font-size 24px
+		&:after
+			position absolute
+			content ''
+	&__item_1
+		left -204px
+		top 2px
+		width 216px
+		&:after
+			bottom -88px
+			right -124px
+			retinaSprite($window_arrow_1_group)
+	&__item_2
+		top 176px
+		right -112px
+		width 216px
+		&:after
+			top -109px
+			left -135px
+			retinaSprite($window_arrow_2_group)
+	&__item_3
+		top 318px
+		left -305px
+		width 267px
+		&:after
+			top 16px
+			right -54px
+			retinaSprite($window_arrow_4_group)
+	&__item_4
+		top 378px
+		right -142px
+		width 247px
+		&:after
+			top -112px
+			left -130px
+			retinaSprite($window_arrow_3_group)
+	&__item_5
+		top 582px
+		right -150px
+		width 340px
+		&:after
+			top -110px
+			left -136px
+			retinaSprite($window_arrow_5_group)
+	&__item_6
+		top 626px
+		left -250px
+		width 174px
+		&:after
+			top -104px
+			right -110px
+			retinaSprite($window_arrow_7_group)
+	&__item_7
+		width 337px
+		top 720px
+		right 30px
+		&:after
+			top -113px
+			left -135px
+			retinaSprite($window_arrow_6_group)
+
+
+

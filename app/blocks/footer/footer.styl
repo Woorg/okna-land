@@ -1,0 +1,105 @@
+.footer
+	background #553f3a url('../images/general/header-bg.jpg') 50% 0 no-repeat
+	background-size cover
+	&__in
+		@extends .in
+		padding-top 60px
+		padding-bottom 60px
+	&__top
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+	&__copyright
+		margin-right 178px
+		font-family $cL
+		font-size 18px
+		color #96776f
+	&__phone
+		margin-right 44px
+	// &__email
+
+	&__social
+		margin-left auto
+	&__bottom
+		padding-top 7px
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items flex-start
+
+	&__text
+		font-family $cL
+		font-size 16px
+		color #fdc516
+		a
+			color #fdc516
+			text-decoration none
+			tr(all .3s ease)
+			&:hover
+				color darken(#fdc516, 10)
+				tr(all .3s ease)
+
+
+.email
+	position relative
+	padding-left 38px
+	color #fff
+	font-size 22px
+	line-height 1
+	text-decoration none
+	&:after
+		position absolute
+		top 0
+		left 0
+		content ''
+		retinaSprite($email_icon_group)
+		transform none
+	&__text
+		margin-bottom 3px
+		line-height 1
+	&__val
+		display block
+		font-family $cL
+		line-height 1
+
+.social
+	width 170px
+	display flex
+	justify-content flex-start
+	align-items flex-start
+	&__item
+		position relative
+		margin-right 10px
+		&:last-child
+			margin-right 0
+	&__item_fb
+		.social__link
+			&:after
+				retinaSprite($fb_icon_group)
+	&__item_vk
+		.social__link
+			&:after
+				retinaSprite($vk_icon_group)
+	&__item_inst
+		.social__link
+			&:after
+				retinaSprite($inst_icon_group)
+	&__link
+		position relative
+		display block
+		width 50px
+		height 50px
+		border 1px solid #fdc516
+		width 50px
+		height 50px
+		border-radius 50%
+		text-indent -9999px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ''
+			transform translate(-50%, -50%)
+		&:hover
+			background-image linear-gradient(to top, #ffba01 0%, #ffd615 100%)

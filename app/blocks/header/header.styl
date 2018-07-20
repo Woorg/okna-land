@@ -1,0 +1,135 @@
+.header
+	position relative
+	z-index 1
+	background #553f3a url('../images/general/header-bg.jpg') 50% 0 no-repeat
+	background-size cover
+	box-shadow 0 6px 8px rgba(3, 6, 6, 0.25)
+	&__in
+		@extends .in
+		padding-top 14px
+		padding-bottom 14px
+		min-height 130px
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+		align-items center
+		color #FFF
+	&__logo
+		margin-right 30px
+		max-width 402px
+
+	&__city
+		position relative
+		margin-right 25px
+		padding-left 22px
+		color #FFF
+		line-height 1
+		font-size 20px
+		text-decoration none
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ''
+			retinaSprite($city_icon_group)
+			transform translateY(-50%)
+		span
+			display inline-block
+			vertical-align top
+			line-height 1
+			border-bottom 1px dotted #fdc516
+		&:hover
+			span
+				border-bottom 1px dotted transparent
+	&__sample
+		position relative
+		margin-right 30px
+		padding-left 36px
+		color #FFF
+		font-size 20px
+		line-height 1
+		text-decoration none
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ''
+			retinaSprite($sample_icon_group)
+			transform translateY(-50%)
+		span
+			display inline-block
+			vertical-align top
+			line-height 1
+			border-bottom 1px dotted #fdc516
+		&:hover
+			span
+				border-bottom 1px dotted transparent
+	&__contacts
+		margin-left auto
+		display flex
+		align-items center
+		justify-content flex-start
+	&__phone
+		margin-top 10px
+		margin-right 16px
+	&__button
+		padding-top 12px
+		padding-right 14px
+		padding-bottom 10px
+		padding-left 14px
+
+.logo
+	position relative
+	width 372px
+	display flex
+	justify-content flex-start
+	align-items center
+	padding-left 110px
+	color #fdc516
+	text-decoration none
+	text-transform uppercase
+	&:after
+		position absolute
+		top 50%
+		left 0
+		content ''
+		retinaSprite($logo_group)
+		transform translateY(-50%)
+
+.phone
+	position relative
+	padding-left 28px
+	color #FFF
+	font-size 24px
+	text-decoration none
+	&:after
+		position absolute
+		top calc(50% - 2px)
+		left 0
+		content ''
+		retinaSprite($phone_icon_group)
+		transform translateY(-50%)
+	span
+		display inline-block
+		vertical-align top
+		line-height 1
+
+.phone_sec
+	position relative
+	padding-left 42px
+	color #fff
+	font-size 22px
+	text-decoration none
+	&:after
+		position absolute
+		top -4px
+		left 0
+		content ''
+		retinaSprite($phone_big_icon_group)
+		transform none
+	.phone__text
+		margin-bottom 2px
+		line-height 1
+	.phone__val
+		font-family $cL
+		line-height 1

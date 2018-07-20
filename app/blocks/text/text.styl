@@ -1,0 +1,62 @@
+.text
+	padding-top $sec-pad-vert
+	// padding-bottom $sec-pad-vert
+	&__title
+		margin-bottom $t-m-bot
+		font-size 42px
+		text-align center
+		color #5d3a31
+	&__row
+		position relative
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+		background url('../images/general/text-bg.jpg') 50% 0 no-repeat
+		background-size cover
+		&:nth-child(even)
+			.text__text
+				margin-right 50%
+				padding-right 57px
+			.text__col-bg
+				right 0
+				order 0
+			.text__col-img
+				right 0
+				order -1
+		&:nth-child(odd)
+			.text__text
+				margin-left 50%
+				padding-left 57px
+			.text__col-bg
+				right 0
+			.text__col-img
+				left 0
+				// order -1
+
+	&__in
+		position relative
+		z-index 1
+		padding-top 103px
+		@extends .in
+		min-height 600px
+
+	&__text
+		@extends .wysiwyg
+		font-size 26px
+	.text__col-bg,
+	.text__col-img
+		position absolute
+		z-index 0
+		top 0
+		width 50%
+		min-height 600px
+	.text__col-bg
+		background url('../images/general/text-bg.jpg') 50% 0 no-repeat
+		background-size cover
+	.text__col-img
+		background #FFF
+		background-position 50% 0
+		background-repeat no-repeat
+		background-size cover
+

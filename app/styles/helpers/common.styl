@@ -1,0 +1,80 @@
+html,
+body
+	height 100%
+
+.page
+	min-height 100%
+	background #fff
+	color #49363b
+	font-display swap
+	font-family $cR
+	font-size 26px
+	font-weight normal
+	line-height 1.2
+
+.in
+	margin auto
+	padding-left 15px
+	padding-right 15px
+	max-width 1200px
+	+r($m)
+		padding-left 15px
+		padding-right 15px
+
+.title
+	position relative
+	color #333333
+	font-family $pB
+	font-size 46px
+	line-height 1.2
+	letter-spacing 0.23px
+	text-transform uppercase
+	+r($tM)
+		font-size (54px/2)
+
+
+
+.button
+	border none
+	padding-top 19px
+	padding-left 30px
+	padding-right 30px
+	padding-bottom 16px
+	display inline-block
+	vertical-align top
+	min-height 50px
+	background-image linear-gradient(to top, #ffba01, #ffd615)
+	box-shadow 0px 5px 10px 0 rgba(242, 173, 25, 0.59), inset 0px -3px 0 0 #f1a709
+	color #FFF
+	font-family $cR
+	text-align center
+	text-decoration none
+	border-radius 5px
+	tr(background .3s ease)
+	&:hover
+		background-image linear-gradient(to top, darken(#ffba01, 5), darken(#ffd615, 5))
+		box-shadow 0px 5px 10px 0 rgba(242, 173, 25, 0.59), inset 0px -3px 0 0 #f1a709
+		tr(background .3s ease)
+	&.button_sec
+		border 2px solid #fdc516
+		background transparent
+		font-size 19px
+		box-shadow none
+		&:hover
+			background-color #fdc516
+.wysiwyg
+	font-size 26px
+	font-weight normal
+	line-height 1.2
+	color #49363b
+
+	p
+		margin-bottom 30px
+		// font-family $sR
+		font-size 26px
+		line-height 1.2
+		text-align left
+	img
+		display block
+		max-width 100%
+		height auto

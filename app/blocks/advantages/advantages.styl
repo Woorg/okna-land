@@ -1,0 +1,99 @@
+.advantages
+	position relative
+	background url('../images/general/advantages-bg.jpg') 50% 0 no-repeat
+	background-size cover
+	overflow hidden
+	&__foliage
+		position absolute
+		top 125px
+		right -100px
+		// width 423px
+		// height 1164px
+	&__in
+		@extends .in
+		padding-top $sec-pad-vert
+		padding-bottom $sec-pad-vert
+	&__title
+		@extends .title
+		margin-bottom 96px
+		color #5d3a31
+		text-align center
+	&__w
+		background url('../images/general/advantages-w-bg.jpg') 50% 0 no-repeat
+		background-size cover
+	&__item
+		margin-bottom 40px
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		align-items flex-start
+
+		&:nth-child(odd)
+			.advantages__image
+				margin-left -47px
+			.advantages__content
+				margin-left 87px
+				padding-right 100px
+
+		&:nth-child(even)
+			.advantages__image
+				margin-right -47px
+			.advantages__content
+				margin-right 87px
+				padding-left 100px
+				order -1
+		&:nth-child(2)
+			.advantages__image
+				margin-top 0
+		&:nth-child(3),
+		&:nth-child(4)
+			.advantages__content
+				padding-top 0
+		&:last-child
+			margin-bottom 0
+			.advantages__image
+				margin-top 0
+				margin-bottom -35px
+
+	&__image
+		position relative
+		border solid 16px #ffffff
+		margin-top -35px
+		width 385px
+		min-height 465px
+		background-color #ffffff
+		border-radius 15px
+		box-shadow 0px 1px 51px 0 rgba(3, 6, 6, 0.08)
+		text-align center
+		img
+			position absolute
+			top 50%
+			left 50%
+			display inline-block
+			vertical-align top
+			max-width 100%
+			height auto
+			transform translate(-50%, -50%)
+	&__content
+		padding-top 104px
+		max-width 744px
+	&__item-title
+		font-family $pB
+		font-size 42px
+		margin-bottom 30px
+	&__text
+		@extends .wysiwyg
+		margin-bottom 30px
+
+	// &__list
+
+	&__list-item
+		position relative
+		margin-bottom 30px
+		padding-left 37px
+		&:after
+			position absolute
+			top 5px
+			left 0
+			content ''
+			retinaSprite($list_item_group)

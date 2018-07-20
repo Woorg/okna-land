@@ -1,6 +1,32 @@
 extends /blocks/layout-default/layout-default
 
+include /blocks/header/header
+
+include /blocks/hero/hero
+include /blocks/tabs/tabs
+include /blocks/what/what
+include /blocks/reasons/reasons
+include /blocks/cta/cta
+include /blocks/plastic/plastic
+include /blocks/advantages/advantages
+include /blocks/works/works
+include /blocks/text/text
+
+include /blocks/footer/footer
+
+
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'oknaderevo.ru';
 
 block content
+	+header()
+	+hero()
+	+what()
+	+reasons()
+	+cta()(style="background-image: url('assets/images/content/cta-bg.jpg');")
+	+plastic()
+	+advantages()
+	+works()
+	+text()
+	+cta()(style="background-image: url('assets/images/content/cta-sec-bg.jpg');")
+	+footer()
