@@ -2,10 +2,11 @@ mixin header()
 	header.header&attributes(attributes)
 		.header__in
 			a.header__logo.logo(href="#") oknaderevo.ru
-			a.header__city(href="#")
-				span Москва
-			a.header__sample(href="#")
-				span Вызвать замерщика
+			.header__center
+				a.header__city(href="#")
+					span Москва
+				a.header__sample(href="#")
+					span Вызвать замерщика
 			.header__contacts
 				a.header__phone.phone(href="#")
 					span 8 (495) 133-39-36

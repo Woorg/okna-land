@@ -7,14 +7,27 @@
 		padding-bottom $sec-pad-vert
 		text-align center
 		font-size 28px
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 	&__title
 		margin-bottom $t-m-bot
 		color #5d3a31
+		+r($tL)
+			margin-bottom ($t-m-bot/2)
 	&__text
 		margin-bottom 56px
 		padding-left 70px
 		padding-right 70px
 		color #49363b
+		+r($tL)
+			margin-bottom (56px/2)
+			font-size 18px
+
+		+r($m)
+			padding-left 0
+			padding-right 0
+
 	&__list
 		display flex
 		flex-flow row wrap
@@ -24,10 +37,16 @@
 	&__item
 		margin-bottom 43px
 		width 40%
+		+r($tL)
+			margin-bottom (44px/2)
+		+r($m)
+			width 100%
 	&__image
 		margin auto
 		margin-bottom 28px
 		max-width 314px
+		+r($tL)
+			margin-bottom 10px
 		img
 			display block
 			max-width 100%
@@ -36,3 +55,10 @@
 	&__item-text
 		padding-left 50px
 		padding-right 50px
+		+r($tL)
+			padding-left 20px
+			padding-right 20px
+			font-size 20px
+		+r($m)
+			padding-left 0
+			padding-right 0

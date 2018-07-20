@@ -29,8 +29,8 @@ body
 	line-height 1.2
 	letter-spacing 0.23px
 	text-transform uppercase
-	+r($tM)
-		font-size (54px/2)
+	+r($tL)
+		font-size (46px/2)
 
 
 
@@ -51,6 +51,11 @@ body
 	text-decoration none
 	border-radius 5px
 	tr(background .3s ease)
+	+r($m)
+		padding-top 12px
+		padding-left 15px
+		padding-right 15px
+		padding-bottom 9px
 	&:hover
 		background-image linear-gradient(to top, darken(#ffba01, 5), darken(#ffd615, 5))
 		box-shadow 0px 5px 10px 0 rgba(242, 173, 25, 0.59), inset 0px -3px 0 0 #f1a709

@@ -9,10 +9,16 @@
 		@extends .in
 		padding-top $sec-pad-vert
 		// padding-bottom $sec-pad-vert
-		padding-bottom 182px
+		padding-bottom $sec-pad-vert
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 	&__title
 		margin-bottom $t-m-bot
 		color #5d3a31
+		text-align center
+		+r($dS)
+			margin-bottom ($t-m-bot/2)
 	// &__tabs
 
 	&__tabs-nav
@@ -22,8 +28,8 @@
 		flex-flow row wrap
 		justify-content center
 		align-items flex-start
-		+r($tM)
-			margin-bottom (44px/2)
+		+r($dS)
+			margin-bottom (90px/2)
 
 	&__tabs-link
 		border 1px solid transparent
@@ -39,15 +45,35 @@
 		box-shadow 0 5px 8px rgba(242, 173, 25, 0.27)
 		border-radius 5px
 		background-image linear-gradient(to top, #ffba01 0%, #ffd615 100%)
+		+r($t)
+			padding-left 10px
+			padding-right 10px
+			min-width (290px/2)
+			font-size (20px/1.4)
+		+r($m)
+			min-width 100%
+			border-radius 0
 		&:first-child
 			&.what__tabs-link_active
 				margin-right -6px
 				border-radius 5px 0 0 5px
+				// +r($t)
+				// 	margin-right 0
+				// 	border-radius 5px
+				+r($m)
+					margin-right 0
+					border-radius 0
 
 		&:last-child
 			&.what__tabs-link_active
 				margin-left -6px
 				border-radius 0 5px 5px 0
+				// +r($t)
+				// 	margin-left 0
+				// 	border-radius 5px
+				+r($m)
+					margin-left 0
+					border-radius 0
 	&__tabs-link_active
 		position relative
 		z-index 1
@@ -63,6 +89,8 @@
 			left 50%
 			bottom -8px
 			content ""
+			// +r($t)
+			// 	display none
 		&:after
 			z-index 0
 			left 50%
@@ -97,14 +125,18 @@
 
 
 	&__window
-		position relative
-		right -57px
-		margin auto
+		// position relative
+		// right -57px
+		// margin auto
 		// max-width 1080px
 		max-width 566px
-
+		+r($t)
+			right 0
 	&__img
 		margin auto
+		max-width 993px
+		+r($m)
+			max-width 100%
 		img
 			display block
 			max-width 100%

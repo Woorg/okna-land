@@ -1,10 +1,12 @@
 .hero
 	text-align center
-
-
 	&__item
 		position relative
 		height 800px
+		+r($dS)
+			height (800px/1.4)
+		+r($m)
+			height 400px
 		&:after
 			position absolute
 			top 0
@@ -21,6 +23,10 @@
 		padding-top 164px
 		color #FFF
 		height 100%
+		+r($dS)
+			padding-top (164px/1.4)
+		+r($m)
+			padding-top (164px/2)
 	&__title
 		margin-bottom 40px
 		padding-left 100px
@@ -29,17 +35,38 @@
 		font-family $pB
 		line-height 1
 		letter-spacing tracking(25)
+		+r($dS)
+			margin-bottom 20px
+			font-size (120px/2)
+			padding-left 50px
+			padding-right 50px
+		+r($m)
+			padding-left 0
+			padding-right 0
+			font-size 42px
+		+r($mM)
+			font-size 30px
+
 	&__text
 		margin-bottom 56px
 		font-size 60px
 		line-height 1
+		+r($dS)
+			font-size 30px
+		+r($m)
+			margin-bottom (56px/2)
+			font-size 24px
+		+r($mM)
+			font-size 20px
 	&__button-w
 		text-align center
 	&__button
 		color #49363b
 		font-family $pB
-		font-size 45px
+		font-size 44px
 		line-height 1
+		+r($m)
+			font-size (45px/2)
 		&:hover
 			background-image linear-gradient(to top, #ffba01, #ffd615)
 			box-shadow 0px 5px 10px 0 rgba(242, 173, 25, 0.59), inset 0px -3px 0 0 #f1a709
@@ -47,12 +74,18 @@
 	.slick-arrow
 		background transparent
 		z-index 1
+		+r($m)
+			display none !important
 		&:before
 			display none
 	.slick-prev
 		left 100px
 		retinaSprite($arrow_left_group)
 		transform translateY(-50%) rotate(0)
+		+r($dS)
+			left 10px
+		+r($m)
+			display none
 		&:hover
 			retinaSprite($arrow_right_active_group)
 			transform translateY(-50%) rotate(180deg)
@@ -63,6 +96,10 @@
 		right 100px
 		retinaSprite($arrow_left_group)
 		transform translateY(-50%) rotate(180deg)
+		+r($dS)
+			right 10px
+		+r($m)
+			display none
 		&:hover
 			retinaSprite($arrow_right_active_group)
 			transform translateY(-50%) rotate(0deg)
@@ -71,6 +108,8 @@
 			transform translateY(-50%) rotate(180deg)
 	.slick-dots
 		bottom 43px
+		+r($m)
+			bottom 10px
 		li
 			button
 				position relative

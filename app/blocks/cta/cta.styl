@@ -13,9 +13,9 @@
 		padding-top $sec-pad-vert
 		padding-bottom $sec-pad-vert
 		text-align center
-		+r($tM)
-			padding-top (60px/2)
-			padding-bottom (55px/2)
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 
 	&__title
 		@extends .title
@@ -26,11 +26,14 @@
 		text-align center
 		letter-spacing 0.2px
 		color #fff
-		+r($tM)
-			font-size (50px/2)
+		+r($t)
+			font-size (42px/2)
 	&__text
 		margin-bottom 24px
 		font-size 38px
+		+r($t)
+			margin-bottom (24px/2)
+			font-size 22px
 	&__button
 		padding-left 80px
 		padding-right 80px
@@ -38,6 +41,15 @@
 		font-family $cB
 		text-transform uppercase
 		tr(all .3s ease)
+		+r($t)
+			padding-right 20px
+			padding-left 20px
+			font-size 18px
+			line-height 1
+		+r($m)
+			padding-top 16px
+
+			line-height 1
 		&:hover
 			tr(all .3s ease)
 

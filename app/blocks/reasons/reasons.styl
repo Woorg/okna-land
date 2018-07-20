@@ -6,15 +6,21 @@
 		position absolute
 		top -236px
 		left -4px
+		+r($dS)
+			display none
 	&__in
 		@extends .in
 		padding-top $sec-pad-vert
 		padding-bottom $sec-pad-vert
 		text-align center
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 	&__title
 		margin-bottom $t-m-bot
 		color #5D3A31
-
+		+r($dS)
+			margin-bottom ($t-m-bot/2)
 	&__list
 		display flex
 		flex-flow row wrap
@@ -24,22 +30,33 @@
 		position relative
 		width 300px
 		margin-bottom 40px
-
+		+r($dS)
+			width 48%
+		+r($m)
+			margin-bottom 10px
+			width 100%
 		&:nth-child(2)
 			margin-left 60px
 			margin-right 60px
 			width 330px
-
+			+r($dS)
+				margin-left 0
+				margin-right 0
+				width 48%
+			+r($m)
+				width 100%
 		&:nth-child(4),
 		&:nth-child(5)
 			margin-left 30px
 			margin-right 30px
-
+			+r($dS)
+				margin-left 0
+				margin-right 0
 		&:after
 			position absolute
 			z-index 0
 			top 0
-			left 14px
+			left -28px
 			content attr(data-num)
 			font-size 300px
 			font-family $cE
@@ -60,3 +77,5 @@
 
 	&__text
 		font-size 22px
+		+r($dS)
+			font-size 18px

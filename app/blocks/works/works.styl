@@ -7,10 +7,15 @@
 		position absolute
 		top -154px
 		left -90px
+		+r($dS)
+			display none
 	&__in
 		@extends .in
 		padding-top $sec-pad-vert
 		padding-bottom $sec-pad-vert
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 	&__title
 		margin-bottom $t-m-bot
 		text-align center
@@ -74,9 +79,7 @@
 		margin-bottom 18px
 		retinaSprite($zoom_group)
 		border-radius 50%
-		+r($t)
-			width (90px/2)
-			height (90px/2)
+
 	&__button-text
 		color #FFF
 		font-family $pR

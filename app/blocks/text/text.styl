@@ -1,11 +1,15 @@
 .text
 	padding-top $sec-pad-vert
-	// padding-bottom $sec-pad-vert
+	+r($dS)
+		padding-top ($sec-pad-vert/2)
 	&__title
 		margin-bottom $t-m-bot
 		font-size 42px
 		text-align center
 		color #5d3a31
+		+r($tL)
+			margin-bottom ($t-m-bot/2)
+			font-size (42px/2)
 	&__row
 		position relative
 		display flex
@@ -14,10 +18,19 @@
 		align-items flex-start
 		background url('../images/general/text-bg.jpg') 50% 0 no-repeat
 		background-size cover
+		&:first-child
+			.text__in
+				+r($tL)
+					padding-top 15px
+					padding-bottom 0
+
 		&:nth-child(even)
 			.text__text
 				margin-right 50%
 				padding-right 57px
+				+r($tL)
+					margin-right 0
+					padding-right 0
 			.text__col-bg
 				right 0
 				order 0
@@ -28,10 +41,18 @@
 			.text__text
 				margin-left 50%
 				padding-left 57px
+				+r($tL)
+					margin-left 0
+					padding-left 0
 			.text__col-bg
 				right 0
 			.text__col-img
 				left 0
+
+			.text__in
+				+r($tL)
+					padding-top 15px
+					padding-bottom 0
 				// order -1
 
 	&__in
@@ -40,10 +61,17 @@
 		padding-top 103px
 		@extends .in
 		min-height 600px
+		+r($tL)
+			padding-top 30px
+			padding-bottom 0
+			min-height auto
 
 	&__text
 		@extends .wysiwyg
 		font-size 26px
+		p
+			+r($tL)
+				font-size 18px
 	.text__col-bg,
 	.text__col-img
 		position absolute
@@ -51,6 +79,9 @@
 		top 0
 		width 50%
 		min-height 600px
+		+r($tL)
+			display none
+			min-height auto
 	.text__col-bg
 		background url('../images/general/text-bg.jpg') 50% 0 no-repeat
 		background-size cover

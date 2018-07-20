@@ -14,13 +14,33 @@
 		justify-content flex-start
 		align-items center
 		color #FFF
+		+r($dS)
+			justify-content center
+			text-align center
 	&__logo
 		margin-right 30px
+		margin-right ratio-percentage(64px, 1170)
 		max-width 402px
+		+r($dS)
+			margin 30px auto 40px
+		+r($m)
+			margin-left auto
+			margin-right auto
+	&__center
+		margin-top -7px
+		min-width 316px
+		+r($dS)
+			margin 10px auto 30px
+			min-width auto
+			width 100%
+			text-align center
+
+
 
 	&__city
 		position relative
 		margin-right 25px
+		margin-right ratio-percentage(45px, 1170)
 		padding-left 22px
 		color #FFF
 		line-height 1
@@ -28,22 +48,24 @@
 		text-decoration none
 		&:after
 			position absolute
-			top 50%
+			top calc(50% + 2px)
 			left 0
 			content ''
 			retinaSprite($city_icon_group)
 			transform translateY(-50%)
 		span
 			display inline-block
-			vertical-align top
+			vertical-align middle
 			line-height 1
 			border-bottom 1px dotted #fdc516
 		&:hover
 			span
 				border-bottom 1px dotted transparent
+
 	&__sample
 		position relative
 		margin-right 30px
+		margin-right ratio-percentage(30px, 1170)
 		padding-left 36px
 		color #FFF
 		font-size 20px
@@ -51,27 +73,40 @@
 		text-decoration none
 		&:after
 			position absolute
-			top 50%
+			top calc(50% + 2px)
 			left 0
 			content ''
 			retinaSprite($sample_icon_group)
 			transform translateY(-50%)
 		span
 			display inline-block
-			vertical-align top
+			vertical-align middle
 			line-height 1
 			border-bottom 1px dotted #fdc516
 		&:hover
 			span
 				border-bottom 1px dotted transparent
+
+
 	&__contacts
+		margin-top -7px
 		margin-left auto
 		display flex
+		flex-flow row wrap
 		align-items center
 		justify-content flex-start
+		+r($dS)
+			margin-top 0
+			margin-right auto
+			margin-left auto
+		+r($m)
+			justify-content center
 	&__phone
 		margin-top 10px
 		margin-right 16px
+		+r($mM)
+			margin-bottom 20px
+
 	&__button
 		padding-top 12px
 		padding-right 14px
@@ -80,7 +115,7 @@
 
 .logo
 	position relative
-	width 372px
+	// width 372px
 	display flex
 	justify-content flex-start
 	align-items center
@@ -88,6 +123,8 @@
 	color #fdc516
 	text-decoration none
 	text-transform uppercase
+	+r($m)
+		font-size (26px/1.4)
 	&:after
 		position absolute
 		top 50%
@@ -104,7 +141,7 @@
 	text-decoration none
 	&:after
 		position absolute
-		top calc(50% - 2px)
+		top calc(50% - 7px)
 		left 0
 		content ''
 		retinaSprite($phone_icon_group)
@@ -113,6 +150,8 @@
 		display inline-block
 		vertical-align top
 		line-height 1
+	+r($m)
+		font-size (24px/1.4)
 
 .phone_sec
 	position relative

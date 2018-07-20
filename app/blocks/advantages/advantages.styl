@@ -7,22 +7,29 @@
 		position absolute
 		top 125px
 		right -100px
-		// width 423px
-		// height 1164px
+		+r($dS)
+			display none
 	&__in
 		@extends .in
 		padding-top $sec-pad-vert
 		padding-bottom $sec-pad-vert
+		+r($dS)
+			padding-top ($sec-pad-vert/2)
+			padding-bottom ($sec-pad-vert/2)
 	&__title
 		@extends .title
 		margin-bottom 96px
 		color #5d3a31
 		text-align center
+		+r($tL)
+			margin-bottom (96px/2)
 	&__w
 		background url('../images/general/advantages-w-bg.jpg') 50% 0 no-repeat
 		background-size cover
+		border-radius 15px
 	&__item
-		margin-bottom 40px
+		// margin-bottom 40px
+		margin-bottom 0
 		display flex
 		flex-flow row wrap
 		justify-content space-between
@@ -31,40 +38,87 @@
 		&:nth-child(odd)
 			.advantages__image
 				margin-left -47px
+				+r($dS)
+					margin-left 0
+				+r($tL)
+					margin-top 0
 			.advantages__content
-				margin-left 87px
+				margin-left 86px
 				padding-right 100px
-
+				+r($tL)
+					margin-left (86px/2)
+					padding-left 50px
+					padding-right 50px
+					margin-left 0
+				+r($m)
+					padding-top 15px
+					padding-left 15px
+					padding-right 15px
 		&:nth-child(even)
 			.advantages__image
 				margin-right -47px
+				+r($dS)
+					margin-right 0
+
 			.advantages__content
-				margin-right 87px
+				margin-right 86px
 				padding-left 100px
 				order -1
-		&:nth-child(2)
-			.advantages__image
-				margin-top 0
+				+r($tL)
+					padding-left 50px
+					padding-right 50px
+					margin-right 0
+				+r($m)
+					padding-top 15px
+					padding-left 15px
+					padding-right 15px
 		&:nth-child(3),
 		&:nth-child(4)
+			.advantages__image
+				margin-top 0
 			.advantages__content
 				padding-top 0
+				+r($tL)
+					padding-top 50px
+				+r($m)
+					padding-top 15px
+					padding-left 15px
+					padding-right 15px
 		&:last-child
 			margin-bottom 0
+			+r($m)
+				padding-bottom 40px
 			.advantages__image
 				margin-top 0
 				margin-bottom -35px
+				+r($m)
+					margin-bottom 0
+					order -1
 
+		&:nth-child(2)
+			.advantages__item
+				margin-bottom 40px
+			.advantages__image
+				margin-top 0
+				+r($tL)
+					order -1
 	&__image
 		position relative
 		border solid 16px #ffffff
 		margin-top -35px
 		width 385px
+		width 32.8%
 		min-height 465px
 		background-color #ffffff
 		border-radius 15px
 		box-shadow 0px 1px 51px 0 rgba(3, 6, 6, 0.08)
 		text-align center
+		+r($tL)
+			width 100%
+			border-radius 0
+		+r($m)
+			min-height auto
+
 		img
 			position absolute
 			top 50%
@@ -74,26 +128,46 @@
 			max-width 100%
 			height auto
 			transform translate(-50%, -50%)
+			+r($m)
+				position static
+				transform none
 	&__content
 		padding-top 104px
 		max-width 744px
+		+r($dS)
+			width 58%
+		+r($tL)
+			padding-top 50px
+			width 100%
 	&__item-title
 		font-family $pB
 		font-size 42px
 		margin-bottom 30px
+		+r($tL)
+			font-size (42px/2)
 	&__text
 		@extends .wysiwyg
 		margin-bottom 30px
-
-	// &__list
+		+r($tL)
+			font-size 18px
+		+r($m)
+			margin-bottom 10px
+	&__list
+		+r($tL)
+			font-size 18px
 
 	&__list-item
 		position relative
 		margin-bottom 30px
 		padding-left 37px
+		+r($m)
+			margin-bottom 10px
+			padding-left 25px
 		&:after
 			position absolute
 			top 5px
 			left 0
 			content ''
 			retinaSprite($list_item_group)
+			+r($m)
+				top 0

@@ -5,29 +5,54 @@
 		@extends .in
 		padding-top 60px
 		padding-bottom 60px
+		+r($tL)
+			padding-top (60px/2)
+			padding-bottom (60px/2)
 	&__top
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
 		align-items center
+		+r($tL)
+			justify-content center
 	&__copyright
 		margin-right 178px
+		margin-right ratio-percentage(50px, 1170)
 		font-family $cL
 		font-size 18px
 		color #96776f
+		+r($tL)
+			margin-right 0
+			margin-bottom 30px
+			width 100%
+		+r($t)
+			text-align center
+		+r($m)
+			margin-bottom 0
+
 	&__phone
 		margin-right 44px
-	// &__email
+		+r($m)
+			display none
+	&__email
+		+r($m)
+			display none
 
 	&__social
 		margin-left auto
+		+r($tL)
+			margin-top 20px
+			margin-right auto
+			margin-bottom 20px
+			margin-left auto
 	&__bottom
 		padding-top 7px
 		display flex
 		flex-flow row wrap
 		justify-content flex-start
 		align-items flex-start
-
+		+r($tL)
+			justify-content center
 	&__text
 		font-family $cL
 		font-size 16px
